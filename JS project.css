@@ -1,3 +1,7 @@
+body{
+    background-color: white;
+}
+
 #header{
     margin: 0;
     width: 100%;
@@ -23,7 +27,33 @@
     justify-content: center;
     margin: auto;
     margin-top: 25px;
+}
 
-    
-    
+#the_cookie {
+    width: 340px;
+    height: 350px;
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+    border-radius: 160px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 300px;
+}
+
+#img_cookie{
+    width: 340px;
+    height: 350px;
+}
+
+#score{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+    right: 40px;
+    bottom: 200px;
+    font-size: 50px;
 }
