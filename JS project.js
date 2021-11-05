@@ -1,4 +1,12 @@
-var score_number = 0;
-document.getElementById("img_cookie").onclick = function(){
-    document.getElementById("score").innerHTML = score_number + 1
-}
+function big_img(x) {
+    x.style.height = "370px";
+    x.style.width = "360px";
+  }
+  
+  function normal_img(x) {
+    x.style.height = "350px";
+    x.style.width = "340px";
+  }
+  
+
+
