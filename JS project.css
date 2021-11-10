@@ -1,25 +1,30 @@
-body{
-    background-color: white;
-    width: 100%;
-    height: 100%;
+body {
+    margin: 0;
 }
 
-#header{
-    margin: 0;
+#innpakning {
     width: 100%;
-    height: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #header{
+    width: 100%;
+    height: 120px;
     border-bottom-style: solid;
     border-width: thin;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    background-color: white;
 }
-
 
 #box_inside_header{
     width: 300px;
     height: 80px;
-    background: linear-gradient(15deg, #A52A2A, #800000, #A0522D, #D2B48C, #FFF8DC);
+    background: linear-gradient(15deg, #A52A2A, #A0522D, #D2B48C, #FFF8DC);
     background-size: 400% 400%;
     border-style: solid;
     border-width: thin;
@@ -27,9 +32,39 @@ body{
     border-radius: 45px;
     display: flex;
     justify-content: center;
-    margin: auto;
-    margin-top: 25px;
+    align-items: center;
+    
 }
+
+#innhold {
+    width: 100%;
+    height: 936px;
+    display: flex;
+    flex-direction: row;
+}
+
+#left_div{
+    width: 35%;
+    height: 100%;
+    background-color: blue;
+}
+
+#middel_div{
+    width: 35%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#right_div{
+    width: 35%;
+    height: 100%;
+    background-color: green;
+}
+
 
 #the_cookie {
     width: 340px;
@@ -38,13 +73,11 @@ body{
     border-width: thin;
     border-color: white;
     border-radius: 160px;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 300px;
-    
+    background-color: none;
+    display: flex;
+    justify-content: center;
 }
+
 
 #img_cookie{
     width: 100%;
@@ -52,28 +85,28 @@ body{
 }
 
 #score{
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    position: relative;
-    right: 40px;
-    bottom: 200px;
-    font-size: 50px;
-}
-
-#score{
     width: 300px;
     height: 80px;
-    background: linear-gradient(-180deg, #BC8F8F, #DEB887, #FFF8DC, #8B4513);
+    background: linear-gradient(45deg,#FFF8DC, #8B4513);
     background-size: 400% 400%;
-    position: absolute;
-    
-    left: 43px;
     border-style: solid;
     border-width: thin;
     border-color: whitesmoke;
-    border-radius: 15px;
+    border-radius: 45px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     
-    
+}
+
+.img_50{
+    height: 200px;
+    width: 200px;
+    filter: blur(10px);
+}
+
+.img_502{
+    height: 200px;
+    width: 200px;
+    filter: blur(0px);
 }
