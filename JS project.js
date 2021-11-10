@@ -16,14 +16,13 @@ function get_score(){
   if (score == 10){
     click_power = 2
   }
-  document.getElementById("score_number").innerHTML = score;
 }
 
 
+var score_50 = 50;
 document.getElementById("img_50").addEventListener("click", function() {
   if (score > 15){
-    score = score + 50
-    
+    score = score + score_50
   }
 });
 
@@ -37,11 +36,10 @@ document.getElementById("img_50").addEventListener("click", function() {
 
 //kjører 10 ganger i sekundet
 setInterval(function(){
+  document.getElementById("score_number").innerHTML = score;
   if (score > 15){
     document.getElementById("img_50").className = "img_502";
-    document.getElementById("score_number").innerHTML = score;
-
-    /*score++;*/
   }
 
 }, 10);
+/*score++;*/
