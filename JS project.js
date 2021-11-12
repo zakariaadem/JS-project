@@ -14,7 +14,7 @@ var click_power = 1;
 function get_score(){
   score = score + click_power;
   if (score == 10){
-    click_power = 2
+    click_power = 2;
   }
 }
 
