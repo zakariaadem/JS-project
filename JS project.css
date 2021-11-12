@@ -47,6 +47,8 @@ body {
     width: 35%;
     height: 100%;
     background-color: blue;
+    display: flex;
+    flex-direction: column;
 }
 
 #middel_div{
@@ -102,10 +104,21 @@ body {
 .img_50{
     height: 200px;
     width: 200px;
-    filter: blur(10px);
+    filter: blur(15px);
+}
+.img_502{
+    height: 200px;
+    width: 200px;
+    filter: blur(0px);
 }
 
-.img_502{
+
+.img_hand{
+    height: 200px;
+    width: 200px;
+    filter: blur(15px);
+}
+.img_hand2{
     height: 200px;
     width: 200px;
     filter: blur(0px);
