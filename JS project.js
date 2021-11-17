@@ -12,7 +12,7 @@ function normalImg(x) {
 /* Click_power Function*/
 var name_of_function = " Click Power =  ";
 var score = 0;
-var click_power = 10000;
+var click_power = 1;
 document.getElementById("click_power").innerHTML = name_of_function + click_power;
 function get_score(){
   score = score + click_power;
@@ -55,6 +55,8 @@ document.getElementById("img_hand").addEventListener("click", function() {
 });
 
 
+
+/* Golden Cookie Function*/
 var lowest_price = 10000;
 var highest_price = 12000;
 var golden_cookie = 10000;
@@ -63,11 +65,17 @@ document.getElementById("golden_cookie").addEventListener("click", function() {
     score = score + golden_cookie
     lowest_price+= 90000
     highest_price+= 100000
+    golden_cookie+= 90000
 
   }
 });
 
 
+
+var random_golden_cookie_power = 10000;
+document.getElementById("random_golden_cookie").addEventListener("click", function() {
+  score = score + random_golden_cookie_power
+});
 
 
 
@@ -121,5 +129,16 @@ setInterval(function() {
 }, 10000);*/
 
 
+
+setInterval(function() {
+  var random_number = Math.floor((Math.random() * 100)) + 1;
+  if (random_number >= 10){
+    document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
+    setTimeout(function(){
+      document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
+    }, 400);
+  }
+  console.log(random_number)
+}, 300000);
 
 

@@ -65,6 +65,8 @@ body {
     width: 35%;
     height: 100%;
     background-color: green;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -130,6 +132,17 @@ body {
 }
 
 .golden_cookie2{
+    height: 400px;
+    width: 400px;
+}
+
+.random_golden_cookie{
+    height: 400px;
+    width: 400px;
+    visibility: hidden;
+}
+
+.random_golden_cookie2{
     height: 400px;
     width: 400px;
 }
