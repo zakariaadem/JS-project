@@ -109,7 +109,6 @@ body {
 .img_502{
     height: 200px;
     width: 200px;
-    filter: blur(0px);
 }
 
 
@@ -122,4 +121,15 @@ body {
     height: 200px;
     width: 200px;
     filter: blur(0px);
+}
+
+.golden_cookie{
+    height: 400px;
+    width: 400px;
+    visibility: hidden;
+}
+
+.golden_cookie2{
+    height: 400px;
+    width: 400px;
 }
