@@ -63,7 +63,7 @@ var golden_cookie = 10000;
 document.getElementById("golden_cookie").addEventListener("click", function() {
   if (score > lowest_price && score < highest_price){
     score = score + golden_cookie
-    lowest_price+= 90000
+       lowest_price+= 90000
     highest_price+= 100000
     golden_cookie+= 90000
 
@@ -114,31 +114,17 @@ setInterval(function() {
 }, 10);
 
 
-/*setInterval(function() {
-  random number =  fra 1 ti 100
-
-  if random number > 90
-    lag cookie, vises på siden
-    setTimeout(() => {
-        remove cookie
-    }, 5000);
-
-    if cookie clicked
-      add score
-
-}, 10000);*/
-
-
 
 setInterval(function() {
   var random_number = Math.floor((Math.random() * 100)) + 1;
-  if (random_number >= 10){
+  if (random_number <= 10){
     document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
     setTimeout(function(){
       document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
-    }, 400);
+    }, 500);
   }
+  
   console.log(random_number)
-}, 300000);
+}, 1000);
 
 
