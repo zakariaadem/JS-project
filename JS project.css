@@ -66,9 +66,7 @@ body {
     height: 100%;
     background-color: green;
     display: flex;
-    flex-direction: column;
 }
-
 
 #the_cookie {
     width: 340px;
@@ -126,24 +124,24 @@ body {
 }
 
 .golden_cookie{
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     visibility: hidden;
 }
 
 .golden_cookie2{
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
 }
 
 .random_golden_cookie{
-    height: 400px;
-    width: 400px;
+    height: 150px;
+    width: 150px;
     visibility: hidden;
 }
 
 .random_golden_cookie2{
-    height: 400px;
-    width: 400px;
+    height: 150px;
+    width: 150px;
 }
 
