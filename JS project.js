@@ -12,7 +12,7 @@ function normalImg(x) {
 /* Click_power Function*/
 var name_of_function = " Click Power =  ";
 var score = 0;
-var click_power = 10000;
+var click_power = 1;
 document.getElementById("click_power").innerHTML = name_of_function + click_power;
 function get_score(){
   score = score + click_power;
@@ -118,43 +118,47 @@ setInterval(function() {
 
 
 setInterval(function() {
-  var random_number = Math.floor((Math.random() * 100)) + 1;
+  var random_number = Math.floor((Math.random() * 4)) + 1;
   var random_number_for_div2 = Math.floor((Math.random() * 4)) + 1;
   var random_number_for_div3 = Math.floor((Math.random() * 4)) + 7;
   var random_number_for_div4 = Math.floor((Math.random() * 4)) + 11;
-  if (random_number <= 10){
+  if (random_number == 1){
     document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
     document.getElementById("right_div").style.justifyContent = "start";
-    
-    
-    if (random_number_for_div2 == 2) {
-      document.getElementById("right_div").style.justifyContent = "end";
-    } 
-
-    if (random_number_for_div3 == 8) {
-      document.getElementById("right_div").style.justifyContent = "center";
-    } 
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     setTimeout(function(){
       document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
     }, 600);
   }
+  else if (random_number == 4){
+    document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
+    document.getElementById("right_div").style.justifyContent = "end";
+    document.getElementById("right_div").style.alignItems = "flex-end";
+    setTimeout(function(){
+      document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
+    }, 600);
+  }
+  else if (random_number == 2){
+    document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
+    document.getElementById("right_div").style.justifyContent = "end";
+    setTimeout(function(){
+      document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
+    }, 600);
+  }
+  else{
+    document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
+    document.getElementById("right_div").style.justifyContent = "start";
+    document.getElementById("right_div").style.alignItems = "flex-end";
+    setTimeout(function(){
+      document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
+    }, 600);
+  }
+  
+  
+  
+  
     console.log(random_number)
-    console.log(random_number_for_div2)
-    console.log(random_number_for_div3)
+    /*console.log(random_number_for_div2)
+    console.log(random_number_for_div3)*/
 }, 1000);
 
 
