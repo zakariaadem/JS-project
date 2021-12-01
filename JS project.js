@@ -12,7 +12,7 @@ function normalImg(x) {
 /* Click_power Function*/
 var name_of_function = " Click Power =  ";
 var score = 0;
-var click_power = 1000;
+var click_power = 1000000;
 document.getElementById("click_power").innerHTML = name_of_function + click_power;
 function get_score(){
   score = score + click_power;
@@ -45,16 +45,25 @@ var name_of_function3 = " (Auto Hand Clicker Function)";
 var price_2 = 1000;
 var hands = 0;
 document.getElementById("price2").innerHTML = price_2 + name_of_function3;
-var img_mouse_pointer = document.createElement('img')
-img_mouse_pointer.src = 'hand_mouse_pointer.png';
-img_mouse_pointer.style.height = "50px"
-img_mouse_pointer.style.width = "50px"
+
+
+
+function generateImage() {
+  var img_mouse_pointer = document.createElement('img');
+  img_mouse_pointer.src = 'hand_mouse_pointer.png';
+  img_mouse_pointer.style.height = "30px";
+  img_mouse_pointer.style.width = "30px";
+  return img_mouse_pointer;
+}
+
 document.getElementById("img_hand").addEventListener("click", function() {
   if (score > price_2){
     score++;
     hands++;
     price_2+= 4000
-    document.getElementById('middel_div').appendChild(img_mouse_pointer);
+    for (var i = 0; i < 1; i++ ) {
+      document.getElementById('mouse_pointer_div').appendChild(generateImage());
+    }
     document.getElementById("price2").innerHTML = price_2 + name_of_function3;
   }
 });
@@ -122,20 +131,26 @@ setInterval(function() {
 
 
 setInterval(function() {
-  var random_number = Math.floor((Math.random() * 4)) + 1;
-  /*var random_number_for_div2 = Math.floor((Math.random() * 4)) + 5;
-  var random_number_for_div3 = Math.floor((Math.random() * 4)) + 9;
-  var random_number_for_div4 = Math.floor((Math.random() * 4)) + 13;*/
-  if (random_number == 1){
+  var random_number = Math.floor((Math.random() * 100)) + 1;
+  var random_number_for_left = Math.floor((Math.random() * 650)) + 1;
+  var random_number_for_top = Math.floor((Math.random() * 700)) + 1;
+
+  var the_px = "px";
+  if (random_number <= 10){
     document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
-    document.getElementById("right_div").style.justifyContent = "start";
+    document.getElementById("random_golden_cookie").style.left = random_number_for_left + the_px;
+    document.getElementById("random_golden_cookie").style.top = random_number_for_top + the_px;
+    
+
     setTimeout(function(){
       document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
     }, 600);
   }
-  else if (random_number == 2) {
+  /*else if (random_number == 2) {
     document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
     document.getElementById("right_div").style.justifyContent = "end";
+    document.getElementById("right_div").style.alignItems = "unset";
+
     setTimeout(function(){
       document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
     }, 600);
@@ -155,31 +170,8 @@ setInterval(function() {
     setTimeout(function(){
       document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
     }, 600);
-  }
+  }*/
     console.log(random_number)
 }, 1000);
 
 
-/*setInterval(function(){
-  var random_number_for_div = Math.floor((Math.random() * 4)) + 1;
-  if(random_number_for_div == 2){
-    document.getElementById("right_div").style.justifyContent = "center"; 
-  }
-  else{
-    document.getElementById("right_div").style.justifyContent = "unset"; 
-  }
-  console.log(random_number_for_div)
-}, 1500);
-
-
-
-/*setInterval(function(){
-  var random_number_for_div2 = Math.floor((Math.random() * 4)) + 1;
-  if(random_number_for_div2 == 2){
-    document.getElementById("right_div").style.justifyContent = "end"; 
-  }
-  else{
-    document.getElementById("right_div").style.justifyContent = "unset"; 
-  }
-  console.log(random_number_for_div2)
-}, 2000);*/

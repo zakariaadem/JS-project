@@ -66,6 +66,7 @@ body {
     height: 100%;
     background-color: green;
     display: flex;
+    
 }
 
 
@@ -139,14 +140,36 @@ body {
     height: 150px;
     width: 150px;
     visibility: hidden;
+    
 }
 
 .random_golden_cookie2{
     height: 150px;
     width: 150px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    
 }
 
-.hand_mouse{
-    height: 50px;
-    width: 50px;
+#mouse_pointer_div{
+    height: 100px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    -webkit-animation: MoveUpDown 50s linear infinite;
+
+}
+
+
+@-webkit-keyframes MoveUpDown {
+    from {
+        bottom: 63px;
+    }
+    to { 
+        bottom: 400px;
+    }
 }
