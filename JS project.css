@@ -1,7 +1,24 @@
 body {
     margin: 0;
+    background: linear-gradient(-45deg, #A52A2A, #A0522D, #D2B48C, #FFF8DC);
+    background-size: 1000% 200%;
+    animation: boxy;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
-
+@keyframes boxy {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+  
+  }
+  
 #innpakning {
     width: 100%;
     height: 100%;
@@ -46,7 +63,7 @@ body {
 #left_div{
     width: 35%;
     height: 100%;
-    background-color: blue;
+    background-color: none;
     display: flex;
     flex-direction: column;
 }
@@ -54,7 +71,7 @@ body {
 #middel_div{
     width: 35%;
     height: 100%;
-    background-color: red;
+    background-color: none;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -64,7 +81,7 @@ body {
 #right_div{
     width: 35%;
     height: 100%;
-    background-color: green;
+    background-color: none;
     display: flex;
     
 }
@@ -159,17 +176,25 @@ body {
     flex-direction: row;
     justify-content: start;
     flex-wrap: wrap;
-
-    -webkit-animation: MoveUpDown 50s linear infinite;
-
 }
 
-
-@-webkit-keyframes MoveUpDown {
+#mouse_pointer{
+    animation: up_down, ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    position: relative;
+}
+@keyframes up_down  {
     from {
-        bottom: 63px;
+        top: 0px;
+        bottom: 0px;
     }
-    to { 
-        bottom: 400px;
+    to {
+        top: 20px;
+        bottom: 20px;
     }
-}
+    
+    
+ 
+ }
