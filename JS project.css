@@ -90,9 +90,6 @@ body {
 #the_cookie {
     width: 340px;
     height: 350px;
-    border-style: solid;
-    border-width: thin;
-    border-color: white;
     border-radius: 160px;
     background-color: none;
     display: flex;
@@ -108,8 +105,6 @@ body {
 #score{
     width: 300px;
     height: 80px;
-    background: linear-gradient(45deg,#FFF8DC, #8B4513);
-    background-size: 400% 400%;
     border-style: solid;
     border-width: thin;
     border-color: whitesmoke;
@@ -125,21 +120,11 @@ body {
     width: 200px;
     filter: blur(15px);
 }
-.img_502{
-    height: 200px;
-    width: 200px;
-}
-
 
 .img_hand{
     height: 200px;
     width: 200px;
     filter: blur(15px);
-}
-.img_hand2{
-    height: 200px;
-    width: 200px;
-    filter: blur(0px);
 }
 
 .golden_cookie{
@@ -148,10 +133,6 @@ body {
     visibility: hidden;
 }
 
-.golden_cookie2{
-    height: 200px;
-    width: 200px;
-}
 
 .random_golden_cookie{
     height: 150px;

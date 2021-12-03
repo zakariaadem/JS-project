@@ -12,7 +12,7 @@ function normalImg(x) {
 /* Click_power Function*/
 var name_of_function = " Click Power =  ";
 var score = 0;
-var click_power = 1000000;
+var click_power = 10000000;
 document.getElementById("click_power").innerHTML = name_of_function + click_power;
 function get_score(){
   score = score + click_power;
@@ -97,10 +97,10 @@ document.getElementById("random_golden_cookie").addEventListener("click", functi
 setInterval(function(){
   document.getElementById("score_number").innerHTML = score;
   if (score > price){
-    document.getElementById("img_50").className = "img_502";
+    document.getElementById("img_50").style.filter = "blur(0px)";
   }
   else {
-    document.getElementById("img_50").className = "img_50";
+    document.getElementById("img_50").style.filter = "blur(15px)";
   }  
 }, 10);
 
@@ -109,10 +109,10 @@ setInterval(function(){
 /* Auto Hand_Clicker Function*/
 setInterval(function() {
     if (score > price_2){
-      document.getElementById("img_hand").className = "img_hand2";
+      document.getElementById("img_hand").style.filter = "blur(0px)";
     }
     else {
-      document.getElementById("img_hand").className = "img_hand";
+      document.getElementById("img_hand").style.filter = "blur(15px)";
     }
   
     score += hands;
@@ -122,10 +122,10 @@ setInterval(function() {
 /* Golden Cookie Function*/
 setInterval(function() {
   if (score > lowest_price && score < highest_price){
-    document.getElementById("golden_cookie").className = "golden_cookie2";
+    document.getElementById("golden_cookie").style.visibility = "unset";
   }
   else {
-    document.getElementById("golden_cookie").className = "golden_cookie";
+    document.getElementById("golden_cookie").style.visibility = "hidden";
   }
 }, 10);
 
@@ -146,7 +146,7 @@ setInterval(function() {
 
     setTimeout(function(){
       document.getElementById("random_golden_cookie").className = "random_golden_cookie";  
-    }, 1000);
+    }, 400);
   }
   /*else if (random_number == 2) {
     document.getElementById("random_golden_cookie").className = "random_golden_cookie2";  
