@@ -12,7 +12,7 @@ function normalImg(x) {
 /* Click_power Function*/
 var name_of_function = " Click Power =  ";
 var score = 0;
-var click_power = 10000000;
+var click_power = 1000;
 document.getElementById("click_power").innerHTML = name_of_function + click_power;
 function get_score(){
   score = score + click_power;

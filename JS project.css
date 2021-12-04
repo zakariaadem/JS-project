@@ -66,6 +66,8 @@ body {
     background-color: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #middel_div{
